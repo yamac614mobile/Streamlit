@@ -46,7 +46,7 @@ c3.title('Stats')
 
 maper = st.beta_container()
 dataset = st.beta_container()
-contadorS = 4
+contadorS = "Azules %s, Rojos %s" (4,0)
 contadorV = 0
 contadorM = 0
 contadorB = 0
@@ -100,3 +100,5 @@ with c3:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
     datos = datos.rename({0: "Distancia"}, axis = "columns")
     st.write(datos)
+
+with dataset:
