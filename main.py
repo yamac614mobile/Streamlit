@@ -47,6 +47,10 @@ c3.title('Stats')
 maper = st.beta_container()
 dataset = st.beta_container()
 contadorS = 4
+contadorV = 0
+contadorM = 0
+contadorB = 0
+contadorBar = 0
 
 
 with header:
@@ -55,7 +59,7 @@ with header:
     
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
-    ciudad = st.selectbox("Selecciona ciudad",("Santander %s" %contadorS,"Valladolid","Burgos","Madrid","Barcelona"))
+    ciudad = st.selectbox("Selecciona ciudad",("Santander (%s)" %contadorS,"Valladolid (%s)" %contadorV ,"Burgos (%s)" %contadorB,"Madrid (%s)" %contadorM,"Barcelona (%s)" %contadorBar))
     
    
 
