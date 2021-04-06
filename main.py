@@ -47,8 +47,7 @@ with header:
     st.title("Stay Healthy Stay Focused")
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander","Valladolid","Burgos","Madrid","Barcelona"))
-    Fecha_Inicio = st.date_input('Date input')
-    Fecha_Fin = st.date_input('Date output')
+    
     st.write("Calculate")
     value = st.button('Recalculate')
    
@@ -67,9 +66,9 @@ with maper:
     ra = folium.FeatureGroup(name="Ruta Azul")
 
     ra.add_child(folium.PolyLine(route03,popup="<i> Equipo Azul: Esther 1</i>",  color= "blue", weight = 5))
-#     ra.add_child(folium.PolyLine(route04,popup="<i> Equipo Azul: Esther 2</i>",  color= "blue", weight = 5))
-    rr.add_child(folium.PolyLine(route05,popup="<i> Equipo Azul: Esther 3</i>",  color= "red", weight = 5))
-#     rr.add_child(folium.PolyLine(route06,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
+    ra.add_child(folium.PolyLine(route04,popup="<i> Equipo Azul: Esther 2</i>",  color= "blue", weight = 5))
+    ra.add_child(folium.PolyLine(route05,popup="<i> Equipo Azul: Esther 3</i>",  color= "red", weight = 5))
+    ra.add_child(folium.PolyLine(route06,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
 
     if equipo == "Equipo azul":
         m.add_child(ra)
@@ -82,10 +81,13 @@ with maper:
 
     folium_static(m)
     st.file_uploader('File uploader')
+
+    Fecha_Inicio = st.date_input('Date input')
+    Fecha_Fin = st.date_input('Date output')
     
     
 
-with header:
+with dataset:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
     datos = datos.rename({0: "Distancia"}, axis = "columns")
     st.write(datos)
