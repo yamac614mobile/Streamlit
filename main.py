@@ -1,7 +1,7 @@
 import streamlit as st
 
-from streamlit_folium import folium_static
-import folium
+# from streamlit_folium import folium_static
+# import folium
 import pandas as pd
 
 
@@ -61,30 +61,30 @@ with header:
 
 
 
-with maper:
+# with maper:
 
-# center on Liberty Bell
-    m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
+# # center on Liberty Bell
+#     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
 
-# Generate layers lines:
-    rr = folium.FeatureGroup(name="Ruta Rojo")
-    ra = folium.FeatureGroup(name="Ruta Azul")
+# # Generate layers lines:
+#     rr = folium.FeatureGroup(name="Ruta Rojo")
+#     ra = folium.FeatureGroup(name="Ruta Azul")
 
-    ra.add_child(folium.PolyLine(route03,popup="<i> Equipo Azul: Esther 1</i>",  color= "blue", weight = 5))
-    ra.add_child(folium.PolyLine(route04,popup="<i> Equipo Azul: Esther 2</i>",  color= "blue", weight = 5))
-    rr.add_child(folium.PolyLine(route05,popup="<i> Equipo Azul: Esther 3</i>",  color= "red", weight = 5))
-    rr.add_child(folium.PolyLine(route06,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
+#     ra.add_child(folium.PolyLine(route03,popup="<i> Equipo Azul: Esther 1</i>",  color= "blue", weight = 5))
+#     ra.add_child(folium.PolyLine(route04,popup="<i> Equipo Azul: Esther 2</i>",  color= "blue", weight = 5))
+#     rr.add_child(folium.PolyLine(route05,popup="<i> Equipo Azul: Esther 3</i>",  color= "red", weight = 5))
+#     rr.add_child(folium.PolyLine(route06,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
 
-    if equipo == "Equipo azul":
-        m.add_child(ra)
-    elif equipo == "Equipo rojo":
+#     if equipo == "Equipo azul":
+#         m.add_child(ra)
+#     elif equipo == "Equipo rojo":
       
-        m.add_child(rr)
-    else:
-        m.add_child(ra)
-        m.add_child(rr)
+#         m.add_child(rr)
+#     else:
+#         m.add_child(ra)
+#         m.add_child(rr)
  
-    folium_static(m)
+#     folium_static(m)
     
 
 with header:
