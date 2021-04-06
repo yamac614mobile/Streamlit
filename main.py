@@ -47,8 +47,8 @@ c3.title('Stats')
 
 maper = st.beta_container()
 dataset = st.beta_container()
-image = Image.open('avataaars.png',use_column_width = 'auto')
 
+image = Image.open('avataaars.png')
 with header:
     st.title("Stay Healthy Stay Focused")
     
@@ -56,9 +56,7 @@ with header:
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona" ))
-    
-
-    st.image(image, caption='Sunrise by the mountains')
+    st.image(image, caption='Sunrise by the mountains', use_column_width='auto')
    
 
 
@@ -103,6 +101,7 @@ with c2:
 
     # Fecha_Inicio = st.date_input('Date input')
     # Fecha_Fin = st.date_input('Date output')
+    st.image(image, caption='Sunrise by the mountains', use_column_width='auto')
     
     
 
@@ -117,8 +116,8 @@ with maper:
     st.write(totaldist)
     st.write(sum(tabla['Distancia']))
 
-    #image = Image.open('avataaars.png',use_column_width='Auto')
+    
 
-    #st.image(image, caption='Sunrise by the mountains')
+    st.image(image, caption='Sunrise by the mountains', use_column_width='auto')
 
 # %%
