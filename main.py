@@ -60,8 +60,7 @@ with header:
 
 
 
-
- with maper:
+with maper:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
     display(m)
 # # center on Liberty Bell
