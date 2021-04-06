@@ -46,7 +46,7 @@ c3.title('Stats')
 
 maper = st.beta_container()
 dataset = st.beta_container()
-contadorS = "Azules %s, Rojos %s" [4,0]
+contadorS = 4
 contadorV = 0
 contadorM = 0
 contadorB = 0
