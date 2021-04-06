@@ -117,7 +117,7 @@ with maper:
     st.write(totaldist)
     st.write(sum(tabla['Distancia']))
 
-    image = Image.open('avataaars.png',use_column_width='Auto')
+    #image = Image.open('avataaars.png',use_column_width='Auto')
 
     st.image(image, caption='Sunrise by the mountains')
 
