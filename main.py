@@ -102,3 +102,4 @@ with c3:
     st.write(datos)
 
 with dataset:
+    csv = st.write("Hi")
