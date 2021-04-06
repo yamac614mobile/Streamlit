@@ -1,7 +1,7 @@
 import streamlit as st
 
 # from streamlit_folium import folium_static
-# import folium
+import folium
 import pandas as pd
 
 
@@ -61,10 +61,10 @@ with header:
 
 
 
-# with maper:
+ with maper:
 
 # # center on Liberty Bell
-#     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
+     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
 
 # # Generate layers lines:
 #     rr = folium.FeatureGroup(name="Ruta Rojo")
@@ -85,6 +85,7 @@ with header:
 #         m.add_child(rr)
  
 #     folium_static(m)
+    display(m)
     
 
 with header:
