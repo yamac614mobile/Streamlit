@@ -9,7 +9,7 @@ from PIL import Image
 
 
 
-
+## Stats parameters
 kmrojo = 18
 kmazul = 23
 
@@ -37,18 +37,22 @@ route06= [[43.465654,-3.795108],[43.465558,-3.795182],[43.465558,-3.795175],[43.
 
 
 
-st.set_page_config(layout="wide")
+## Streamlit page structure
+## Header
 header = st.beta_container()
+
+## 3 columns with ratio distribution
 c1, c2, c3 = st.beta_columns((1, 2, 1))
 
 c1.title('Selectors')
 c2.title('Main Map')
 c3.title('Stats')
 
+## 2 extra sections
 maper = st.beta_container()
 dataset = st.beta_container()
 
-image = Image.open('avataaars.png')
+
 with header:
     st.title("Stay Healthy Stay Focused")
     
@@ -56,10 +60,6 @@ with header:
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona" ))
-
-   
-
-
 
 with c2:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
@@ -75,7 +75,7 @@ with c2:
         m.location= [41.386494, 2.168121]
     else:
         m.location= [43.475285,-3.797579]
-# # center on Liberty Bell
+
      
 
 # # Generate layers lines:
@@ -90,7 +90,6 @@ with c2:
     if equipo == "Equipo azul":
         m.add_child(ra)
     elif equipo == "Equipo rojo":
-      
         m.add_child(rr)
     else:
         m.add_child(ra)
@@ -101,9 +100,6 @@ with c2:
     # Fecha_Inicio = st.date_input('Date input')
     # Fecha_Fin = st.date_input('Date output')
     
-    
-    
-
 with c3:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
     datos = datos.rename({0: "Distancia"}, axis = "columns")
@@ -114,7 +110,5 @@ with maper:
     totaldist = pd.DataFrame(tabla['Distancia'])
     st.write(totaldist)
     st.write("Distancia total: %s " %sum(tabla['Distancia']))
-
-    
 
 # %%
