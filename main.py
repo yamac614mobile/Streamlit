@@ -82,8 +82,7 @@ with c2:
         m.add_child(ra)
         m.add_child(rr)
 
-#    folium_static(m)
-    st.write(m._repr_html_(), unsafe_allow_html=True)
+    folium_static(m)
     # st.file_uploader('File uploader')
 
     # Fecha_Inicio = st.date_input('Date input')
