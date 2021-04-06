@@ -109,7 +109,7 @@ with c3:
 with maper:
     st.header("Data from CSV file")
     tabla = pd.read_csv("Tabla Resultados.csv")
-    totaldist = pd.DataFrame(tabla())
+    totaldist = pd.DataFrame(tabla.head(7))
     st.write(totaldist)
     st.write("Distancia total: %s " %sum(tabla['Distancia']))
 
