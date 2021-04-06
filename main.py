@@ -46,11 +46,6 @@ c3.title('Stats')
 
 maper = st.beta_container()
 dataset = st.beta_container()
-contadorS = 4
-contadorV = 0
-contadorM = 0
-contadorB = 0
-contadorBar = 0
 
 
 with header:
@@ -59,7 +54,7 @@ with header:
     
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
-    ciudad = st.selectbox("Selecciona ciudad",("Santander (%s)" %contadorS,"Valladolid (%s)" %contadorV ,"Burgos (%s)" %contadorB,"Madrid (%s)" %contadorM,"Barcelona (%s)" %contadorBar))
+    ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona" ))
     
    
 
@@ -67,6 +62,16 @@ with c1:
 
 with c2:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
+    if ciudad == "Santander"
+    m = folium.Map(location=[43.475285,-3.797579])
+    if ciudad == "Burgos"
+    m = folium.Map(location=[43.475285,-3.797579])
+    if ciudad == "Madrid"
+    m = folium.Map(location=[40.416819,-3.703577])
+    if ciudad == "Santander"
+    m = folium.Map(location=[43.475285,-3.797579])
+    if ciudad == "Santander"
+    m = folium.Map(location=[43.475285,-3.797579])
 # # center on Liberty Bell
      
 
