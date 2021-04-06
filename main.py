@@ -127,5 +127,5 @@ with d2:
     tabla = pd.read_csv("Tabla Resultados.csv")
     totaldist = pd.DataFrame(tabla['Distancia'])
     st.write(totaldist)
-    st.write(sum(tabla[0]))
+    st.write(tabla[0])
 # %%
