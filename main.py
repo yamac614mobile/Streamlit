@@ -65,15 +65,15 @@ with c2:
     if ciudad == "Santander":
         m.location=[43.475285,-3.797579]
     elif ciudad == "Burgos":
-        m = folium.Map(location=[43.475285,-3.797579])
+        m.location= [42.341583,-3.700852]
     elif ciudad == "Madrid":
-        m.location=location=[40.416819,-3.703577]
-    elif ciudad == "Santander":
-        m = folium.Map(location=[43.475285,-3.797579])
-    elif ciudad == "Santander":
-        m = folium.Map(location=[43.475285,-3.797579])
+        m.location= [40.416819,-3.703577]
+    elif ciudad == "Valladolid":
+        m.location= [41.647490,-4.729641]
+    elif ciudad == "Barcelona":
+        m.location= [41.385363,-2.164835]
     else:
-        m = folium.Map(location=[43.475285,-3.797579])
+        m.location= [43.475285,-3.797579]
 # # center on Liberty Bell
      
 
