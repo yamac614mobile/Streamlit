@@ -47,7 +47,7 @@ c3.title('Stats')
 
 maper = st.beta_container()
 dataset = st.beta_container()
-
+image = Image.open('avataaars.png',use_column_width = 'auto')
 
 with header:
     st.title("Stay Healthy Stay Focused")
@@ -56,7 +56,7 @@ with header:
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona" ))
-    image = Image.open('avataaars.png',use_column_width = 'auto')
+    
 
     st.image(image, caption='Sunrise by the mountains')
    
