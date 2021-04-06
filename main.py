@@ -38,7 +38,7 @@ route06= [[43.465654,-3.795108],[43.465558,-3.795182],[43.465558,-3.795175],[43.
 
 st.set_page_config(layout="wide")
 header = st.beta_container()
-c1, c2, c3 = st.beta_columns((1, 3, 1))
+c1, c2, c3 = st.beta_columns((2, 1, 2))
 
 c1.title('Selectors')
 c2.title('Main Map')
