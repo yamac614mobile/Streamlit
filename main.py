@@ -1,6 +1,6 @@
 import streamlit as st
 
-# from streamlit_folium import folium_static
+from streamlit_folium import folium_static
 import folium
 import pandas as pd
 
@@ -62,7 +62,6 @@ with header:
 
 with maper:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
-    display(m)
 # # center on Liberty Bell
      
 
@@ -84,7 +83,7 @@ with maper:
 #         m.add_child(ra)
 #         m.add_child(rr)
  
-#     folium_static(m)
+    folium_static(m)
     
     
 
