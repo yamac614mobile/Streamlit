@@ -71,7 +71,7 @@ with c2:
     elif ciudad == "Valladolid":
         m.location= [41.647490,-4.729641]
     elif ciudad == "Barcelona":
-        m.location= [41.385363,-2.164835]
+        m.location= [41.386494,-2.168121]
     else:
         m.location= [43.475285,-3.797579]
 # # center on Liberty Bell
