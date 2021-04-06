@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_folium import folium_static
 import folium
 import pandas as pd
-
+from PIL import Image
 
 
 
@@ -115,6 +115,8 @@ with maper:
     st.write(totaldist)
     st.write(sum(tabla['Distancia']))
 
+    image = Image.open('avataaars.png')
 
+    st.image(image, caption='Sunrise by the mountains')
 
 # %%
