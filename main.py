@@ -113,8 +113,8 @@ with maper:
     tabla = pd.read_csv("Tabla Resultados.csv")
     totaldist = pd.DataFrame(tabla['Distancia'])
     st.write(totaldist)
+    st.write(sum(tabla['Distancia']))
 
-with dataset:
-    st.write("Hi")
+
 
 # %%
