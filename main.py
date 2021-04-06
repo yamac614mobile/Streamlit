@@ -56,7 +56,7 @@ with header:
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona" ))
-    st.image(image, caption='Sunrise by the mountains', use_column_width='auto')
+
    
 
 
@@ -98,10 +98,9 @@ with c2:
 
     folium_static(m)
     # st.file_uploader('File uploader')
-
     # Fecha_Inicio = st.date_input('Date input')
     # Fecha_Fin = st.date_input('Date output')
-    st.image(image, caption='Sunrise by the mountains', use_column_width='auto')
+    
     
     
 
@@ -117,14 +116,5 @@ with maper:
     st.write(sum(tabla['Distancia']))
 
     
-d1, d2, d3 = st.beta_columns((1, 4, 2))
 
-with d1:
-    st.image(image, caption='Sunrise by the mountains', use_column_width='auto')
-
-
-with d2:
-   
-    tablaentera= pd.DataFrame(tabla['Equipo','Duelo','Ciudad','Persona','Distancia','Fecha'])
-    st.write(tablaentera)
 # %%
