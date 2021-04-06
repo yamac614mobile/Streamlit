@@ -37,9 +37,13 @@ route06= [[43.465654,-3.795108],[43.465558,-3.795182],[43.465558,-3.795175],[43.
 
 
 st.set_page_config(layout="wide")
-
-
 header = st.beta_container()
+c1, c2, c3 = st.beta_columns((1, 3, 1))
+
+c1.title('Column 1')
+c2.title('Column 2')
+c3.title('Column 3')
+
 maper = st.beta_container()
 dataset = st.beta_container()
 
@@ -48,15 +52,14 @@ with header:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander","Valladolid","Burgos","Madrid","Barcelona"))
     
-    st.write("Calculate")
-    value = st.button('Recalculate')
+
    
     
    
 
 
 
-with maper:
+with c2:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
 # # center on Liberty Bell
      
@@ -87,7 +90,7 @@ with maper:
     
     
 
-with dataset:
+with c3:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
     datos = datos.rename({0: "Distancia"}, axis = "columns")
     st.write(datos)
