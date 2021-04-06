@@ -63,11 +63,11 @@ with c1:
 with c2:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
     if ciudad == "Santander":
-        m = folium.Map(location=[43.475285,-3.797579])
+        m.location=[43.475285,-3.797579]
     elif ciudad == "Burgos":
         m = folium.Map(location=[43.475285,-3.797579])
     elif ciudad == "Madrid":
-        m = folium.Map(location=[40.416819,-3.703577])
+        m.location=location=[40.416819,-3.703577]
     elif ciudad == "Santander":
         m = folium.Map(location=[43.475285,-3.797579])
     elif ciudad == "Santander":
