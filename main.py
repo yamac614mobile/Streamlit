@@ -56,7 +56,9 @@ with header:
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona" ))
-    
+    image = Image.open('avataaars.png',use_column_width='Auto')
+
+    st.image(image, caption='Sunrise by the mountains')
    
 
 
@@ -115,7 +117,7 @@ with maper:
     st.write(totaldist)
     st.write(sum(tabla['Distancia']))
 
-    image = Image.open('avataaars.png')
+    image = Image.open('avataaars.png',use_column_width='Auto')
 
     st.image(image, caption='Sunrise by the mountains')
 
