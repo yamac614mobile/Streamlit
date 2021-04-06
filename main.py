@@ -40,20 +40,20 @@ st.set_page_config(layout="wide")
 header = st.beta_container()
 c1, c2, c3 = st.beta_columns((1, 3, 1))
 
-c1.title('Column 1')
-c2.title('Column 2')
-c3.title('Column 3')
+c1.title('Selectors')
+c2.title('Main Map')
+c3.title('Stats')
 
 maper = st.beta_container()
 dataset = st.beta_container()
 
 with header:
     st.title("Stay Healthy Stay Focused")
+    
+    
+with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.selectbox("Selecciona ciudad",("Santander","Valladolid","Burgos","Madrid","Barcelona"))
-    
-
-   
     
    
 
