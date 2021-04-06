@@ -81,7 +81,7 @@ with maper:
         m.add_child(rr)
 
     folium_static(m)
-    st.sidebar.file_uploader('File uploader')
+    st.file_uploader('File uploader')
     
     
 
