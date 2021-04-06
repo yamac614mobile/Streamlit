@@ -74,14 +74,14 @@ with maper:
 #     rr.add_child(folium.PolyLine(route06,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
 
     if equipo == "Equipo azul":
+        st.write("Qupio azul")
 ##        m.add_child(ra)
     elif equipo == "Equipo rojo":
       
         m.add_child(rr)
     else:
 ##        m.add_child(ra)
-        m.add_child(rr)
- 
+        st.write("TODOS")
     folium_static(m)
     
     
