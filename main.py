@@ -119,6 +119,6 @@ with maper:
 
     #image = Image.open('avataaars.png',use_column_width='Auto')
 
-    st.image(image, caption='Sunrise by the mountains')
+    #st.image(image, caption='Sunrise by the mountains')
 
 # %%
