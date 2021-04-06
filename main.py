@@ -45,7 +45,7 @@ dataset = st.beta_container()
 
 with header:
     st.title("Stay Healthy Stay Focused")
-    equipo = st.sidebar.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
+    equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
     ciudad = st.sidebar.selectbox("Selecciona ciudad",("Santander","Valladolid","Burgos","Madrid","Barcelona"))
     Fecha_Inicio = st.sidebar.date_input('Date input')
     Fecha_Fin = st.sidebar.date_input('Date output')
@@ -79,8 +79,9 @@ with maper:
       
         m.add_child(rr)
     else:
-##        m.add_child(ra)
-        st.write("TODOS")
+        m.add_child(ra)
+        m.add_child(rr)
+
     folium_static(m)
     
     
