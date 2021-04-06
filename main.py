@@ -46,15 +46,13 @@ dataset = st.beta_container()
 with header:
     st.title("Stay Healthy Stay Focused")
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
-    ciudad = st.sidebar.selectbox("Selecciona ciudad",("Santander","Valladolid","Burgos","Madrid","Barcelona"))
-    Fecha_Inicio = st.sidebar.date_input('Date input')
-    Fecha_Fin = st.sidebar.date_input('Date output')
-    st.sidebar.write("Calculate")
-    value = st.sidebar.button('Recalculate')
-    st.sidebar.write(value)
-    st.sidebar.write(Fecha_Inicio)
-    st.sidebar.write(Fecha_Fin)
-    st.sidebar.file_uploader('File uploader')
+    ciudad = st.selectbox("Selecciona ciudad",("Santander","Valladolid","Burgos","Madrid","Barcelona"))
+    Fecha_Inicio = st.date_input('Date input')
+    Fecha_Fin = st.date_input('Date output')
+    st.write("Calculate")
+    value = st.button('Recalculate')
+   
+    
    
 
 
@@ -83,6 +81,7 @@ with maper:
         m.add_child(rr)
 
     folium_static(m)
+    st.sidebar.file_uploader('File uploader')
     
     
 
