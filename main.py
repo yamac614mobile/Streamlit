@@ -117,7 +117,15 @@ with maper:
     st.write(sum(tabla['Distancia']))
 
     
+d1, d2, d3 = st.beta_columns((1, 4, 2))
 
+with d1:
     st.image(image, caption='Sunrise by the mountains', use_column_width='auto')
 
+
+with d2:
+    tabla = pd.read_csv("Tabla Resultados.csv")
+    totaldist = pd.DataFrame(tabla['Distancia'])
+    st.write(totaldist)
+    st.write(sum(tabla['Distancia']))
 # %%
