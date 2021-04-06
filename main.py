@@ -1,3 +1,4 @@
+#%%
 import streamlit as st
 from streamlit_folium import folium_static
 import folium
@@ -108,5 +109,12 @@ with c3:
     datos = datos.rename({0: "Distancia"}, axis = "columns")
     st.write(datos)
 
+with maper:
+    tabla = pd.read_csv("Tabla Resultados.csv")
+    totaldist = pd.DataFrame(tabla['Distancia'])
+    st.write(totaldist)
+
 with dataset:
     st.write("Hi")
+
+# %%
