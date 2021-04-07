@@ -5,6 +5,14 @@ import folium
 import pandas as pd
 from PIL import Image
 
+import streamlit.components.v1 as components
+
+
+
+st.header("test html import")
+
+
+
 
 
 
@@ -100,6 +108,10 @@ with c2:
     st.file_uploader('File uploader')
     # Fecha_Inicio = st.date_input('Date input')
     # Fecha_Fin = st.date_input('Date output')
+    HtmlFile = open("StayHealthyStayFocused-Mapa01.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    #print(source_code)
+    components.html(source_code)
     
 with c3:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
