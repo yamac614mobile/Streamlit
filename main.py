@@ -257,5 +257,5 @@ with c2:
 with c1:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
     datos = datos.rename({0: "Distancia"}, axis = "columns")
-    st.write(sum(int(listado["Distancia"])))
+    st.write(sum(tabla["Distancia"]))
 # %%
