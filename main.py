@@ -190,7 +190,7 @@ with c2:
     ra.add_child(folium.PolyLine(route07,popup="<i> Equipo Azul: Esther 2</i>",  color= "blue", weight = 5))
     ra.add_child(folium.PolyLine(route08,popup="<i> Equipo Azul: Esther 3</i>",  color= "blue", weight = 5))
     ra.add_child(folium.PolyLine(route09,popup="<i> Equipo Azul: Esther 4</i>",  color= "blue", weight = 5))
-    ra.add_child(folium.PolyLine(route100,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
+    ra.add_child(folium.PolyLine(route101,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
 
 
     if equipo == "Equipo azul":
