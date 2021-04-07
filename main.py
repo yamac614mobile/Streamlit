@@ -224,10 +224,7 @@ with c2:
     # Fecha_Fin = st.date_input('Date output')
     
     
-with c1:
-    datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
-    datos = datos.rename({0: "Distancia"}, axis = "columns")
-    st.write(datos)
+
 
 with c2:
     st.header("Data from CSV file")
@@ -256,4 +253,9 @@ with c2:
         st.write(listado[listado["Ciudad"] == "Madrid"])
 
         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
+
+with c1:
+    datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
+    datos = datos.rename({0: "Distancia"}, axis = "columns")
+    st.write(sum(tabla['Distancia']))
 # %%
