@@ -234,7 +234,15 @@ with c2:
     tabla = pd.read_csv("Tabla Resultados.csv")
     listado = pd.DataFrame(tabla.head(50))
     
+    if equipo == "Equipo Rojo":
+        st.write( listado[listado["Equipo"] == "Rojo"])
+        
+    elif equipo == "Equipo Azul":
+        st.write(listado[listado["Equipo"] == "Azul"])
     
+    else:
+        st.write(listado)
+
     if ciudad == "Santander":
         st.write( listado[listado["Ciudad"] == "Santander"])
         
@@ -252,5 +260,5 @@ with c2:
         
     else:
         st.write(listado)
-        st.write("Distancia total: %s " %sum(tabla['Distancia']))
+        #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 # %%
