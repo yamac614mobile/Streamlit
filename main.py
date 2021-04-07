@@ -234,10 +234,10 @@ with c2:
     tabla = pd.read_csv("Tabla Resultados.csv")
     listado = pd.DataFrame(tabla.head(50))
     
-    if equipo == "Equipo Rojo":
+    if equipo == "Equipo rojo":
         st.write( listado[listado["Equipo"] == "Rojo"])
         
-    elif equipo == "Equipo Azul":
+    elif equipo == "Equipo azul":
         st.write(listado[listado["Equipo"] == "Azul"])
     
     else:
