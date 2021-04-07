@@ -190,7 +190,23 @@ with c2:
     ra.add_child(folium.PolyLine(route07,popup="<i> Equipo Azul: Esther 2</i>",  color= "blue", weight = 5))
     ra.add_child(folium.PolyLine(route08,popup="<i> Equipo Azul: Esther 3</i>",  color= "blue", weight = 5))
     ra.add_child(folium.PolyLine(route09,popup="<i> Equipo Azul: Esther 4</i>",  color= "blue", weight = 5))
-    ra.add_child(folium.PolyLine(route101,popup="<i> Equipo Azul: Esther 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route101,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route102,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route103,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route104,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route105,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route106,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route107,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route108,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route109,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route110,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route111,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route112,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+    rr.add_child(folium.PolyLine(route113,popup="<i> Equipo Rojo 4</i>",  color= "red", weight = 5))
+
+
+
+
 
 
     if equipo == "Equipo azul":
@@ -207,7 +223,7 @@ with c2:
     # Fecha_Fin = st.date_input('Date output')
     
     
-with c3:
+with c1:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
     datos = datos.rename({0: "Distancia"}, axis = "columns")
     st.write(datos)
