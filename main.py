@@ -160,7 +160,7 @@ with header:
     
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
-    ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Oslo","Madrid" ,"Barcelona", "Todas" ))
+    ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Oslo", "Todas" ))
 
 with c2:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 12, tiles = "cartodbpositron")
@@ -235,38 +235,18 @@ with c2:
     listado = pd.DataFrame(tabla.head(50))
     
     if (equipo == "Equipo azul") & (ciudad == "Santander"):
-        st.write((listado[listado["Equipo"] == "Azul"]) & (listado[listado["Ciudad"] == "Santander"]))
-        
-    elif equipo == "Equipo azul":
-        st.write(listado[listado["Equipo"] == "Azul"])
-
-    
+        st.write((listado[listado["Equipo"] == "Azul"]) & (listado[listado["Ciudad"] == "Santander"])) 
 
     elif (equipo == "Equipo rojo") & (ciudad == "Oslo"):
         st.write((listado[listado["Equipo"] == "Rojo"]) & (listado[listado["Ciudad"] == "Oslo"]))
     
-    elif equipo == "Equipo rojo":
-        st.write(listado[listado["Equipo"] == "Rojo"])
+    elif (equipo == "Equipo rojo") & (ciudad == "Todas"):
+        st.write((listado[listado["Equipo"] == "Rojo"]))
+    elif (equipo == "Equipo azul") & (ciudad == "Todas"):
+        st.write((listado[listado["Equipo"] == "Azul"]))
     
     else:
-        st.write(listado)
+        st.write(listado[listado["Ciudad"] == "Madrid")
 
-    if ciudad == "Santander":
-        st.write( listado[listado["Ciudad"] == "Santander"])
-        
-    elif ciudad == "Oslo":
-        st.write(listado[listado["Ciudad"] == "Oslo"])
-        
-    elif ciudad == "Madrid":
-        st.write(listado[listado["Ciudad"] == "Madrid"])
-        
-    elif ciudad == "Valladolid":
-        st.write(listado[listado["Ciudad"] == "Valladolid"])
-        
-    elif ciudad == "Barcelona":
-        st.write(listado[listado["Ciudad"] == "Barcelona"])
-        
-    else:
-        st.write(listado)
         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 # %%
