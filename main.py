@@ -246,7 +246,7 @@ with c2:
         st.write((listado[listado["Equipo"] == "Azul"]))
     
     else:
-        st.write(listado[listado["Ciudad"] == "Madrid")
+        st.write(listado[listado["Ciudad"] == "Madrid"])
 
         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 # %%
