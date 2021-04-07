@@ -9,7 +9,6 @@ import streamlit.components.v1 as components
 
 
 
-st.header("test html import")
 
 
 
@@ -109,9 +108,6 @@ with c2:
     # Fecha_Inicio = st.date_input('Date input')
     # Fecha_Fin = st.date_input('Date output')
     
-
-    
-    components.iframe("https://docs.streamlit.io/en/latest")
     
 with c3:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
