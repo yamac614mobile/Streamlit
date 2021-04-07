@@ -114,15 +114,19 @@ with c2:
     
     if ciudad == "Santander":
         st.write(listado[listado["Ciudad"] == "Santander"])
-        st.write("Distancia total: %s " %sum(tabla['Distancia']))
-    # elif ciudad == "Burgos":
-    #     m.location= [42.341583,-3.700852]
-    # elif ciudad == "Madrid":
-    #     m.location= [40.416819,-3.703577]
-    # elif ciudad == "Valladolid":
-    #     m.location= [41.647490,-4.729641]
-    # elif ciudad == "Barcelona":
-    #     m.location= [41.386494, 2.168121]
+        st.write("Distancia total: %s " %sum(listado[listado["Ciudad"] == "Santander"]))
+    elif ciudad == "Burgos":
+        st.write(listado[listado["Ciudad"] == "Burgos"])
+        st.write("Distancia total: %s " %sum(listado[listado["Ciudad"] == "Burgos"]))
+    elif ciudad == "Madrid":
+        st.write(listado[listado["Ciudad"] == "Madrid"])
+        st.write("Distancia total: %s " %sum(listado[listado["Ciudad"] == "Madrid"]))
+    elif ciudad == "Valladolid":
+        st.write(listado[listado["Ciudad"] == "Valladolid"])
+        st.write("Distancia total: %s " %sum(listado[listado["Ciudad"] == "Valladolid"]))
+    elif ciudad == "Barcelona":
+        st.write(listado[listado["Ciudad"] == "Barcelona"])
+        st.write("Distancia total: %s " %sum(listado[listado["Ciudad"] == "Barcelona"]))
     else:
         st.write(listado)
         st.write("Distancia total: %s " %sum(tabla['Distancia']))
