@@ -108,10 +108,10 @@ with c2:
     st.file_uploader('File uploader')
     # Fecha_Inicio = st.date_input('Date input')
     # Fecha_Fin = st.date_input('Date output')
-    HtmlFile = open("StayHealthyStayFocused-Mapa01.html", 'r', encoding='utf-8')
-    source_code = HtmlFile.read() 
-    #print(source_code)
-    components.html(source_code)
+    
+
+    
+    components.iframe("https://docs.streamlit.io/en/latest")
     
 with c3:
     datos = pd.DataFrame(["%s km" % kmrojo,"%s km" % kmazul],["Equipo Rojo","Equipo Azul"])
