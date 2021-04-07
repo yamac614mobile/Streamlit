@@ -175,8 +175,8 @@ with c2:
     elif ciudad == "Barcelona":
         m.location= [41.386494, 2.168121]
     else:
-        m.location= [51.197907,4.887854]
-        m.zoom_start= 20
+        m = folium.Map(location=[51.197907,4.887854], zoom_start= 5, tiles = "cartodbpositron")
+      
 
      
 
