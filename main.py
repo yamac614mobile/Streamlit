@@ -237,11 +237,18 @@ with c2:
     if (equipo == "Equipo azul") & (ciudad == "Santander"):
         st.write((listado[listado["Equipo"] == "Azul"]) & (listado[listado["Ciudad"] == "Santander"])) 
 
+    elif (equipo == "Todos los equipos") & (ciudad == "Santander"):
+        st.write((listado[listado["Ciudad"] == "Santander"])) 
+
     elif (equipo == "Equipo rojo") & (ciudad == "Oslo"):
         st.write((listado[listado["Equipo"] == "Rojo"]) & (listado[listado["Ciudad"] == "Oslo"]))
     
+    elif (equipo == "Todos los equipos") & (ciudad == "Oslo"):
+        st.write((listado[listado["Ciudad"] == "Oslo"]))
+    
     elif (equipo == "Equipo rojo") & (ciudad == "Todas"):
         st.write((listado[listado["Equipo"] == "Rojo"]))
+
     elif (equipo == "Equipo azul") & (ciudad == "Todas"):
         st.write((listado[listado["Equipo"] == "Azul"]))
     
