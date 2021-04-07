@@ -109,7 +109,7 @@ with c3:
 with c2:
     st.header("Data from CSV file")
     tabla = pd.read_csv("Tabla Resultados.csv")
-    listado = pd.DataFrame(tabla.head(10))
+    listado = pd.DataFrame(tabla.head(50))
     
     
     if ciudad == "Santander":
