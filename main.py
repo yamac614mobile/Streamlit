@@ -113,8 +113,7 @@ with c2:
     
     
     if ciudad == "Santander":
-        listauno = listado[listado["Ciudad"]
-        st.write( listauno == "Santander"])
+        st.write( listado[listado["Ciudad"] == "Santander"])
         
     elif ciudad == "Burgos":
         st.write(listado[listado["Ciudad"] == "Burgos"])
