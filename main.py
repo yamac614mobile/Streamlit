@@ -175,7 +175,8 @@ with c2:
     elif ciudad == "Barcelona":
         m.location= [41.386494, 2.168121]
     else:
-        m.location= [43.475285,-3.797579]
+        m.location= [51.197907,4.887854]
+        m.zoom_start= 3
 
      
 
