@@ -163,7 +163,7 @@ with c1:
     ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Oslo","Madrid" ,"Barcelona", "Todas" ))
 
 with c2:
-    m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
+    m = folium.Map(location=[43.475285,-3.797579], zoom_start= 12, tiles = "cartodbpositron")
     if ciudad == "Santander":
         m.location=[43.475285,-3.797579]
     elif ciudad == "Oslo":
