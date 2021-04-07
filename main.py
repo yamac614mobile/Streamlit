@@ -114,7 +114,7 @@ with c2:
     
     if ciudad == "Santander":
         st.write(listado[listado["Ciudad"] == "Santander"])
-        st.write("Distancia total: %s " %sum(listado[listado["Ciudad"] == "Santander"]))
+        st.write("Distancia total: %s " %sum(distancia.listado.[listado["Ciudad"] == "Santander"]))
     elif ciudad == "Burgos":
         st.write(listado[listado["Ciudad"] == "Burgos"])
         st.write("Distancia total: %s " %sum(listado[listado["Ciudad"] == "Burgos"]))
