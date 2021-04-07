@@ -106,14 +106,15 @@ with c3:
     datos = datos.rename({0: "Distancia"}, axis = "columns")
     st.write(datos)
 
-with maper:
+with c2:
     st.header("Data from CSV file")
     tabla = pd.read_csv("Tabla Resultados.csv")
     listado = pd.DataFrame(tabla.head(10))
     
-    st.write("Distancia total: %s " %sum(tabla['Distancia']))
+    
     if ciudad == "Santander":
         st.write(listado[listado["Ciudad"] == "Santander"])
+        st.write("Distancia total: %s " %sum(tabla['Distancia']))
     # elif ciudad == "Burgos":
     #     m.location= [42.341583,-3.700852]
     # elif ciudad == "Madrid":
@@ -124,5 +125,5 @@ with maper:
     #     m.location= [41.386494, 2.168121]
     else:
         st.write(listado)
-
+        st.write("Distancia total: %s " %sum(tabla['Distancia']))
 # %%
