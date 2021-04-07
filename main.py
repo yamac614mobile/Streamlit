@@ -235,7 +235,7 @@ with c2:
     listado = pd.DataFrame(tabla.head(50))
     
     if equipo == "Equipo rojo" & ciudad == "Santander":
-        st.write(listado[(listado["Equipo"] == "Rojo") & (listado["Ciudad"] == "Santander"))
+        st.write( (listado[listado["Equipo"] == "Rojo"]) & (listado[listado["Ciudad"] == "Santander"]))
         
     elif equipo == "Equipo azul":
         st.write(listado[listado["Equipo"] == "Azul"])
