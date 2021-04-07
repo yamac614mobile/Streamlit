@@ -243,7 +243,7 @@ with c2:
     elif equipo == "Equipo rojo":
         st.write(listado[listado["Equipo"] == "Rojo"])
 
-    elif: (equipo == "Equipo rojo") & (ciudad == "Oslo"):
+    elif (equipo == "Equipo rojo") & (ciudad == "Oslo"):
         st.write((listado[listado["Equipo"] == "Rojo"]) & (listado[listado["Ciudad"] == "Oslo"]))
     
     else:
