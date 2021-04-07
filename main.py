@@ -176,7 +176,7 @@ with c2:
         m.location= [41.386494, 2.168121]
     else:
         m.location= [51.197907,4.887854]
-        m.zoom_start= 3
+        m.zoom_start= 20
 
      
 
