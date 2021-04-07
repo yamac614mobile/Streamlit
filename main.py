@@ -60,7 +60,7 @@ with header:
     
 with c1:
     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
-    ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona" ))
+    ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Valladolid" ,"Burgos","Madrid" ,"Barcelona", "Todas" ))
 
 with c2:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 13, tiles = "cartodbpositron")
