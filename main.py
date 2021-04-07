@@ -109,8 +109,20 @@ with c3:
 with maper:
     st.header("Data from CSV file")
     tabla = pd.read_csv("Tabla Resultados.csv")
-    totaldist = pd.DataFrame(tabla.head(10))
-    st.write(totaldist)
+    listado = pd.DataFrame(tabla.head(10))
+    
     st.write("Distancia total: %s " %sum(tabla['Distancia']))
+    if ciudad == "Santander":
+        st.write(listado[listado["Ciudad"] == "Santander"])
+    # elif ciudad == "Burgos":
+    #     m.location= [42.341583,-3.700852]
+    # elif ciudad == "Madrid":
+    #     m.location= [40.416819,-3.703577]
+    # elif ciudad == "Valladolid":
+    #     m.location= [41.647490,-4.729641]
+    # elif ciudad == "Barcelona":
+    #     m.location= [41.386494, 2.168121]
+    else:
+        st.write(listado)
 
 # %%
