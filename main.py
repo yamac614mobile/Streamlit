@@ -256,5 +256,5 @@ with c2:
 
 with c1:
     
-    st.write(tabla.sum(axis=5))
+    st.write(tabla.sum(axis=4))
 # %%
