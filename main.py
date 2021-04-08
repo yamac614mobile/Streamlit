@@ -238,7 +238,7 @@ with c2:
         st.write((listado[listado["Ciudad"] == "Santander"])) 
 
     elif (equipo == "Equipo rojo") & (ciudad == "Oslo"):
-        st.write(listado[(listado["Equipo"] == "Rojo") & (listado["Ciudad"] == "Oslo"))
+        st.write(listado[(listado["Equipo"] == "Rojo") & (listado["Ciudad"] == "Oslo")])
     
     elif (equipo == "Todos los equipos") & (ciudad == "Oslo"):
         st.write((listado[listado["Ciudad"] == "Oslo"]))
