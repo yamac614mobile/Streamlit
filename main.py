@@ -250,11 +250,10 @@ with c2:
         st.write((listado[listado["Equipo"] == "Azul"]))
     
     else:
-        st.write(listado[listado["Ciudad"] == "Madrid"])
+        st.write("No data")
 
         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 
 with c1:
-    
-    st.write(tabla.sum(axis=4))
+    print (listado["Distancia"].sum())
 # %%
