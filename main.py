@@ -257,5 +257,6 @@ with c2:
         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 
 with c1:
-    st.write(listado["Distancia"].sum())
+    st.header("Stats")
+    st.write("Kilómetros totales registrados: %s km " %(listado["Distancia"].sum()/1000))
 # %%
