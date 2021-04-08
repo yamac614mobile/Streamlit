@@ -258,5 +258,5 @@ with c2:
 
 with c1:
     st.header("Stats")
-    st.write("Kilómetros totales registrados: %s km " %(listado["Distancia"].sum()/1000))
+    st.write("Kilómetros totales registrados: %s km " %(round(listado["Distancia"].sum()/1000,3)))
 # %%
