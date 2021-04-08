@@ -257,5 +257,5 @@ with c2:
         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 
 with c1:
-    print (listado["Distancia"].sum())
+    st.write(listado["Distancia"].sum())
 # %%
