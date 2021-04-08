@@ -147,7 +147,7 @@ c1, c2, c3 = st.beta_columns((1, 2, 1))
 
 c1.title('Selectors')
 c2.title('Main Map')
-c3.title('Stats')
+
 
 ## 2 extra sections
 maper = st.beta_container()
@@ -257,6 +257,9 @@ with c2:
         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 
 with c1:
-    st.header("Stats")
+    st.title("Stats")
+    st.write("Kilómetros totales registrados: %s km " %(round(listado["Distancia"].sum()/1000,3)))
+    rojtot= listado[(listado["Equipo"] == "Rojo"]
+    st.write("Kilómetros totales registrados: %s km " %(round(rojtot["Distancia"].sum()/1000,3)))
     st.write("Kilómetros totales registrados: %s km " %(round(listado["Distancia"].sum()/1000,3)))
 # %%
