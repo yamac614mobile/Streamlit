@@ -248,6 +248,8 @@ with c2:
 
     elif (equipo == "Equipo azul") & (ciudad == "Todas"):
         st.write((listado[listado["Equipo"] == "Azul"]))
+    elif (equipo == "Todos los equipos") & (ciudad == "Todas"):
+        st.write(listado)
     
     else:
         st.write("No data")
