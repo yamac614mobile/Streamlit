@@ -260,6 +260,8 @@ with c1:
     st.title("Stats")
     st.write("Kilómetros totales registrados: %s km " %(round(listado["Distancia"].sum()/1000,3)))
     rojtot= listado[listado["Equipo"] == "Rojo"]
-    st.write("Kilómetros totales registrados: %s km " %(round(rojtot["Distancia"].sum()/1000,3)))
-    st.write("Kilómetros totales registrados: %s km " %(round(listado["Distancia"].sum()/1000,3)))
+    st.write("Kilómetros registrados por el equipo rojo: %s km " %(round(rojtot["Distancia"].sum()/1000,3)))
+    aztot= listado[listado["Equipo"] == "Azul"]
+    st.write("Kilómetros registrados por el equipo azul: %s km " %(round(aztot["Distancia"].sum()/1000,3)))
+
 # %%
