@@ -153,29 +153,32 @@ c2.title('Main Map')
 maper = st.beta_container()
 dataset = st.beta_container()
 
-
-with header:
-    st.title("Stay Healthy Stay Focused")
-    
-    
-with c1:
-    equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
-    ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Oslo", "Todas" ))
-
-with c2:
+with maper:
     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 12, tiles = "cartodbpositron")
-    if ciudad == "Santander":
-        m.location=[43.475285,-3.797579]
-    elif ciudad == "Oslo":
-        m.location= [59.916358,10.749232]
-    elif ciudad == "Madrid":
-        m.location= [40.416819,-3.703577]
-    elif ciudad == "Valladolid":
-        m.location= [41.647490,-4.729641]
-    elif ciudad == "Barcelona":
-        m.location= [41.386494, 2.168121]
-    else:
-        m = folium.Map(location=[51.197907,4.887854], zoom_start= 4, tiles = "cartodbpositron")
+
+
+# with header:
+#     st.title("Stay Healthy Stay Focused")
+    
+    
+# with c1:
+#     equipo = st.selectbox("Selecciona equipo",("Todos los equipos","Equipo rojo", "Equipo azul"))
+#     ciudad = st.selectbox("Selecciona ciudad",("Santander" ,"Oslo", "Todas" ))
+
+# with c2:
+#     m = folium.Map(location=[43.475285,-3.797579], zoom_start= 12, tiles = "cartodbpositron")
+#     if ciudad == "Santander":
+#         m.location=[43.475285,-3.797579]
+#     elif ciudad == "Oslo":
+#         m.location= [59.916358,10.749232]
+#     elif ciudad == "Madrid":
+#         m.location= [40.416819,-3.703577]
+#     elif ciudad == "Valladolid":
+#         m.location= [41.647490,-4.729641]
+#     elif ciudad == "Barcelona":
+#         m.location= [41.386494, 2.168121]
+#     else:
+#         m = folium.Map(location=[51.197907,4.887854], zoom_start= 4, tiles = "cartodbpositron")
       
 
      
@@ -226,42 +229,42 @@ with c2:
     
 
 
-with c2:
-    st.header("Data from CSV file")
-    tabla = pd.read_csv("Tabla Resultados.csv")
-    listado = pd.DataFrame(tabla.head(50))
+# with c2:
+#     st.header("Data from CSV file")
+#     tabla = pd.read_csv("Tabla Resultados.csv")
+#     listado = pd.DataFrame(tabla.head(50))
     
-    if (equipo == "Equipo azul") & (ciudad == "Santander"):
-        st.write(listado[(listado["Equipo"] == "Azul") & (listado["Ciudad"] == "Santander")]) 
+#     if (equipo == "Equipo azul") & (ciudad == "Santander"):
+#         st.write(listado[(listado["Equipo"] == "Azul") & (listado["Ciudad"] == "Santander")]) 
 
-    elif (equipo == "Todos los equipos") & (ciudad == "Santander"):
-        st.write((listado[listado["Ciudad"] == "Santander"])) 
+#     elif (equipo == "Todos los equipos") & (ciudad == "Santander"):
+#         st.write((listado[listado["Ciudad"] == "Santander"])) 
 
-    elif (equipo == "Equipo rojo") & (ciudad == "Oslo"):
-        st.write(listado[(listado["Equipo"] == "Rojo") & (listado["Ciudad"] == "Oslo")])
+#     elif (equipo == "Equipo rojo") & (ciudad == "Oslo"):
+#         st.write(listado[(listado["Equipo"] == "Rojo") & (listado["Ciudad"] == "Oslo")])
     
-    elif (equipo == "Todos los equipos") & (ciudad == "Oslo"):
-        st.write((listado[listado["Ciudad"] == "Oslo"]))
+#     elif (equipo == "Todos los equipos") & (ciudad == "Oslo"):
+#         st.write((listado[listado["Ciudad"] == "Oslo"]))
     
-    elif (equipo == "Equipo rojo") & (ciudad == "Todas"):
-        st.write((listado[listado["Equipo"] == "Rojo"]))
+#     elif (equipo == "Equipo rojo") & (ciudad == "Todas"):
+#         st.write((listado[listado["Equipo"] == "Rojo"]))
 
-    elif (equipo == "Equipo azul") & (ciudad == "Todas"):
-        st.write((listado[listado["Equipo"] == "Azul"]))
-    elif (equipo == "Todos los equipos") & (ciudad == "Todas"):
-        st.write(listado)
+#     elif (equipo == "Equipo azul") & (ciudad == "Todas"):
+#         st.write((listado[listado["Equipo"] == "Azul"]))
+#     elif (equipo == "Todos los equipos") & (ciudad == "Todas"):
+#         st.write(listado)
     
-    else:
-        st.write("No data")
+#     else:
+#         st.write("No data")
 
-        #st.write("Distancia total: %s " %sum(tabla['Distancia']))
+#         #st.write("Distancia total: %s " %sum(tabla['Distancia']))
 
-with c1:
-    st.title("Stats")
-    st.write("Kilómetros totales registrados: %s km " %(round(listado["Distancia"].sum()/1000,3)))
-    rojtot= listado[listado["Equipo"] == "Rojo"]
-    st.write("Kilómetros registrados por el equipo rojo: %s km " %(round(rojtot["Distancia"].sum()/1000,3)))
-    aztot= listado[listado["Equipo"] == "Azul"]
-    st.write("Kilómetros registrados por el equipo azul: %s km " %(round(aztot["Distancia"].sum()/1000,3)))
+# with c1:
+#     st.title("Stats")
+#     st.write("Kilómetros totales registrados: %s km " %(round(listado["Distancia"].sum()/1000,3)))
+#     rojtot= listado[listado["Equipo"] == "Rojo"]
+#     st.write("Kilómetros registrados por el equipo rojo: %s km " %(round(rojtot["Distancia"].sum()/1000,3)))
+#     aztot= listado[listado["Equipo"] == "Azul"]
+#     st.write("Kilómetros registrados por el equipo azul: %s km " %(round(aztot["Distancia"].sum()/1000,3)))
 
 # %%
