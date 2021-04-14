@@ -140,13 +140,13 @@ st.set_page_config(layout="wide")
 
 ## Streamlit page structure
 ## Header
-header = st.beta_container()
+# header = st.beta_container()
 
-## 3 columns with ratio distribution
-c1, c2, c3 = st.beta_columns((1, 2, 1))
+# ## 3 columns with ratio distribution
+# c1, c2, c3 = st.beta_columns((1, 2, 1))
 
-c1.title('Selectors')
-c2.title('Main Map')
+# c1.title('Selectors')
+# c2.title('Main Map')
 
 
 ## 2 extra sections
@@ -213,13 +213,13 @@ with maper:
 
 
 
-    if equipo == "Equipo azul":
-        m.add_child(ra)
-    elif equipo == "Equipo rojo":
-        m.add_child(rr)
-    else:
-        m.add_child(ra)
-        m.add_child(rr)
+    # if equipo == "Equipo azul":
+    #     m.add_child(ra)
+    # elif equipo == "Equipo rojo":
+    #     m.add_child(rr)
+    # else:
+    #     m.add_child(ra)
+    #     m.add_child(rr)
 
     folium_static(m)
     #st.file_uploader('File uploader')
